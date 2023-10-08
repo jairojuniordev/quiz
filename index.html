@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" async></script>
+    <!--pra garantir q o html vai rodar primeiro q o js-->
+    <title>Quiz Game</title>
+    <!--criei um código html básico que relaciona o style do css com o html  -->
+  </head>
+
+  <body onload="onLoad()">
+    <div class="loading-container">
+      <div class="loading-dots"></div>
+      <div class="loading-dots"></div>
+      <div class="loading-dots"></div>
+    </div>
+    <div class="Contenção hiden">
+      <!--div é um elemento generico que foi utilizado para criar uma especie de conteúdo central, como uma contenção. Sendo o class"contenção" utilizado para poder estilizar no css.-->
+      <div class="nomeGame">
+        <h1>Quiz Game</h1>
+      </div>
+      <!-- titulo do jogo utilizado no mesmo sentido do class"contenção".-->
+
+      <div class="questões-Contenção hide">
+        <!--foi usado o hide aqui para esconder o conteúdo principal, no sentido de ter uma abertura de jogo.-->
+        <!--<span style="color: black;"> </span>-->
+        <span class="perguntas" style="background-color: aliceblue"></span>
+        <div class="respostas-Contenção">
+          <button class="respostas button"></button>
+          <button class="respostas button"></button>
+          <button class="respostas button"></button
+          ><!--button utilizado para criar botões, não tem muito o que dizer, o proprio nome já diz tudo.-->
+          <button class="respostas button"></button>
+        </div>
+      </div>
+
+      <div class="controles-Contenção">
+        <!--usado para criar botoes onde há começar e pular questões-->
+        <button class="começar-button">Começar Quiz :!!</button>
+        <button class="próxima-questão button hide">Próxima pergunta</button>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/index.html">Info</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

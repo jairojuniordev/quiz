@@ -1,0 +1,188 @@
+@keyframes dot-keyframes {
+  0% {
+    opacity: .4;
+    transform: scale(1, 1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2, 1.2);
+  }
+
+  100% {
+    opacity: .4;
+    transform: scale(1, 1);
+  }
+}
+
+.loading-container {
+  text-align: center;
+  width: 100%;
+}
+
+.loading-dots {
+  animation: dot-keyframes 1.5s infinite ease-in-out;
+  background-color: #fff;
+  border-radius: 10px;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  
+}
+.loading-dots:nth-child(2) {
+  animation-delay: .5s;
+}
+
+.loading-dots:nth-child(3) {
+  animation-delay: 1s;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;  /* usado para tornar a pág em um formato unico, quebrando o padrão que já vem nela*/
+}
+
+button {
+  cursor: pointer; /* usado para indicar que há um botão para clicar/usar */
+}
+
+.nomeGame {
+  color: whitesmoke;
+  height: 100%;
+  padding: 20px;
+  font-size: larger;      /* usado para estilizar e centralizar dentro do Contenção, tendo uma fundametal importância, indicar o nome do game*/
+  font-style: italic;
+  font-weight: 800;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  background: linear-gradient(rgb(24, 27, 66), rgb(70, 30, 44));
+  height: 100vh; /* essa parte foi feita pra dar estilo ao prótotipo/pág e centraliza-lo*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.Contenção {
+  background-color:black;
+  width: 100%;
+  max-width: 800px;
+
+  border: 5px solid white; /* Essa parte foi feita para dar à centralização das perguntas e respostas, junto com à contenção*/
+  border-radius: 50px;
+  padding: 25px;
+  box-shadow: 0 0 4px 4px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  div {
+      width: 100px;
+      height: 100px;
+      
+      animation-name: nome;
+      animation-duration: 5s;
+      animation-timing-function: ease-in-out; /* está sendo criado uma animação */
+      animation-iteration-count: infinite;
+      animation-play-state: running;}
+      @keyframes animation { 50.0%
+      {linear-gradient(red,yellow);}
+  }
+}
+
+.questões-Contenção {
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center; /*usado para estilizar e centralizar as questões */
+  align-items: center;
+  gap: 15xp;
+}
+
+.questões {
+  margin-top: 0px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;     /* usado para criar as estilizações das perguntas. EX:.quanto é 5+5? */
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.respostas-Contenção {
+  width: 100%;        /*usado para criar e conter as questões pra ficar organizado. width é especifica para largura */
+  display: grid;
+  gap: 20px;
+}
+.button {
+  background-color: beige;
+  color: black;
+  font-size: medium;
+  height: 30px;               /* estilização dos bões e transições*/
+  padding: 0 32px;
+  transition: filter 0.7;
+  
+}
+
+.button:not(:disabled):hover {
+  filter: sepia(0.5);
+  filter: drop-shadow(0.5); /* usado para dar efeito quando clicar nos botões */
+  filter: brightness(0.8);
+
+}
+
+.controles-Contenção {
+  margin-top: 20px;     /* usado para estilizar os botões começar e próxima pergunta */
+}
+
+.hide {
+  display:none; /* usado para esconder o conteudo especifico */
+}
+
+.respostas:disabled {
+  cursor: not-allowed;
+}
+
+.hiden {
+  display: none;
+  opacity: 0;
+}
+
+nav {
+  width: 100%; 
+  height: 50px;
+  position: absolute;
+  bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+nav ul, a {
+  text-decoration: none;
+  list-style: none;
+}
+nav ul a {
+  background-color: #eee;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+nav ul a:hover {
+  transition: all 0.5s;
+  padding: 15px 20px;
+}
+
+.select-correct-option {
+  background-color: greenyellow;
+}
+.select-incorrect-option {
+  background-color: red;
+}
